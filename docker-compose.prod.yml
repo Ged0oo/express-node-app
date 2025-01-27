@@ -2,8 +2,7 @@ services:
   app:
     build:
       context: .
-      args: 
-        - NODE_ENV=production
+      target: production
     container_name: my-express-app
     environment:
       - PORT=3000
