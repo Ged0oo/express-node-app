@@ -1,7 +1,12 @@
 services:
-  app:
+  app:  
+    build:
+      context: .
+      args: 
+        - NODE_ENV=development
     volumes:
       - ./src:/app/src:ro
     environment:
       - PORT=4000
-      - NODE_ENV=development
+      - NODE_ENV=development 
+    command: npm run start-dev
