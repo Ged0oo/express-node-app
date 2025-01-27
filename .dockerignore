@@ -5,3 +5,4 @@ Dockerfile
 *.tmp
 build
 .git/
+docker-compose*
