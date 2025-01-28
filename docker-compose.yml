@@ -5,6 +5,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root 
       MONGO_INITDB_ROOT_PASSWORD: example 
+    volumes:
+      - mongo-db:/data/db
 
   app:
     container_name: my-express-app
@@ -13,4 +15,6 @@ services:
     env_file:
       - ./.env
 
+volumes:
+  mongo-db:
       
