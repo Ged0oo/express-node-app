@@ -41,7 +41,7 @@ client
 
 app.get('/', (req, res) => {
     redisClient.set('Products', 'Mobile Phones ..');
-    res.send('<h1>Hi Dev!</h1>');
+    res.send('<h1>Hi Dev from AWS, this Nagy App!</h1>');
 });
 
 app.get('/data', async (req, res) => {
