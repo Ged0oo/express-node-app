@@ -52,7 +52,7 @@ services:
 
   app:
     container_name: my-express-app
-    image: mnagy156/tresmerge-docker:tagname
+    image: mnagy156/tresmerge-docker
     ports:
       - "4000:4000"
     env_file:
