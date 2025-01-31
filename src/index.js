@@ -41,7 +41,7 @@ client
 
 app.get('/', (req, res) => {
     redisClient.set('Products', 'Mobile Phones ..');
-    res.send(`<h1>Hi Dev, This is Nagy!</h1> <h2>Hi Dev! This is a New SRC Update</h2>`);
+    res.send('<h1>Hi Dev, This is Nagy!</h1> <h2>Hi Dev! This is a New SRC Update</h2> <h3>Hi Dev! This is docker hub</h3>');
 });
 
 app.get('/data', async (req, res) => {
