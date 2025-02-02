@@ -25,23 +25,23 @@ redisClient.connect();
 //     .then(() => console.log("Connected to MongoDB"))
 //     .catch((err) => console.log("Failed to connect to MongoDB:", err));
 
-const postgresHost = 'postgres';
-const postgresPort = 5432;
-const postgresUname = 'myuser'; // use the correct username defined in your docker-compose.yml
-const postgresPasswd = 'mypassword'; // use the correct password defined in your docker-compose.yml
-const postgresURI = `postgres://${postgresUname}:${postgresPasswd}@${postgresHost}:${postgresPort}`;
-const client = new Pool({
-	connectionString: postgresURI,
-});
-client
-	.connect()
-	.then(() => console.log("Connected to PostgreeDB"))
-	.catch((err) => console.log("Failed to connect to PostgreeDB:", err));
+// const postgresHost = 'postgres';
+// const postgresPort = 5432;
+// const postgresUname = 'myuser'; // use the correct username defined in your docker-compose.yml
+// const postgresPasswd = 'mypassword'; // use the correct password defined in your docker-compose.yml
+// const postgresURI = `postgres://${postgresUname}:${postgresPasswd}@${postgresHost}:${postgresPort}`;
+// const client = new Pool({
+// 	connectionString: postgresURI,
+// });
+// client
+// 	.connect()
+// 	.then(() => console.log("Connected to PostgreeDB"))
+// 	.catch((err) => console.log("Failed to connect to PostgreeDB:", err));
 
 
 app.get('/', (req, res) => {
     redisClient.set('Products', 'Mobile Phones ..');
-    res.send('<h1>Hi Dev, This is Nagy!</h1> <h2>Hi Dev! This is a New SRC Update</h2> <h3>Hi Dev! This is docker hub</h3>');
+    res.send('<h1>Hi Dev, This is Nagy!</h1> <h2>This is docker hub</h2>');
 });
 
 app.get('/data', async (req, res) => {
