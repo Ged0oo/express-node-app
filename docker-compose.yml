@@ -32,6 +32,17 @@ services:
       - ./.env
     depends_on:
       - redis 
+    deploy:
+      replicas: 4
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+      placement:
+        constraints:
+          - "node.role == worker"
 
 volumes:
   mongo-db:

@@ -18,7 +18,7 @@ redisClient.connect();
 app.get('/', (req, res) => {
     redisClient.set('Products', 'Mobile Phones ..');
     console.log(`Traffic from ${os.hostname()}`);
-    res.send('<h1>Hi Dev, This is Nagy!</h1> <h2>This is docker hub</h2> <h3>With Watchtower.</h3>');
+    res.send('<h1>Hi Dev, This is Nagy!</h1> <h2>This is docker hub</h2> <h3>with docker swarm.</h3>');
 });
 
 app.listen(port, () => {
