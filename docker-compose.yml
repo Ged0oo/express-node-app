@@ -40,9 +40,6 @@ services:
       restart_policy:
         condition: on-failure
         delay: 5s
-      placement:
-        constraints:
-          - "node.role == worker"
 
 volumes:
   mongo-db:
